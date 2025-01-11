@@ -139,5 +139,7 @@ cd blockchain
 npm start
 ```
 
-
+## Acknowledgment
+This project was a collaboration between multiple students as part of an assignment. The purpose of this assignment is to demonstrate the setup and deployment of a blockchain system using tools such as React, Ganache, XAMPP, and Brownie. 
+The work provided here reflects the students' understanding and implementation of blockchain technology and its integration with front-end and back-end systems.
 
