@@ -24,6 +24,7 @@ This repository provides a comprehensive guide to setting up a blockchain system
 2. **Download Ganache GUI**:
    - [Download from Ganache Archive](https://archive.trufflesuite.com/ganache/).
    - Create a new workspace in Ganache (e.g., `blockchain`).
+3. Launch and open the workspace created.
 
 ---
 
