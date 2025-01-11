@@ -80,7 +80,11 @@ Update the following lines:
 DocumentRoot "filepath/blockchain/src"
 <Directory "filepath/blockchain">
 ```
-2. Start Apache:
+3. create database to store user login information:
+```bash
+python3 create_db.py
+```
+4. Start Apache:
 Start the Apache server from the XAMPP control panel. (May require restart after all the configurations are done)
 
 ---
