@@ -1,0 +1,1124 @@
+/* Center the login container */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #3d3d3d; 
+  color: #f5f5f5; /* Light text color for readability */
+}
+
+.login-container {
+  width: 100%;
+  position: relative;
+  max-width: 360px;
+  background: #3d3d3d; 
+  padding-top: 70%;
+  padding-bottom: 70%;
+  padding-right: 40%;
+  padding-left: 20%;
+  border-radius: 10px;
+  /* box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3); /* Adjusted for dark background */
+  text-align: center; 
+}
+
+.login-container h1 {
+  font-size: 28px;
+  margin-bottom: 33px;
+  color: rgba(223, 162, 71, 0.689); /* White text for contrast */
+}
+
+/* Form Styling */
+.login-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.input-group {
+  position: relative;
+  padding-bottom: 10px;
+}
+
+.login-input {
+  width: 100%;
+  padding: 10px 15px;
+  font-size: 16px;
+  border: 1px solid #888888; /* Darker border for better contrast */
+  border-radius: 5px;
+  outline: none;
+  background-color: #4d4d4d; /* Dark gray input background */
+  color: #f5f5f5; /* Light text */
+}
+
+.login-input:focus {
+  border-color: #ffffff; /* White border on focus */
+  background-color: #5d5d5d; /* Slightly lighter gray for focus */
+}
+
+/* Password Toggle Button */
+.password-toggle {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  color: #bbbbbb;
+}
+
+.eth-label {
+  text-align: left;
+  display: block;
+  margin-bottom: 10px;
+}
+.Username-label {
+  text-align: left;
+  display: block;
+  margin-bottom: 10px;
+}
+
+.Password-label {
+  text-align: left;
+  display: block;
+  margin-bottom: 10px;
+}
+.password-toggle:hover {
+  color: #ffffff;
+}
+
+.register {
+  text-align: right;
+  position: relative;
+  left: 15%;
+}
+
+.register a {
+  font-size: 14px;
+  color: #bbbbbb;
+  text-decoration: none;
+}
+
+.register a:hover {
+  text-decoration: underline;
+}
+
+/* Login Button */
+.login-button {
+  width: 100%;
+  padding: 10px 15px;
+  font-size: 16px;
+  color: #ffffff;
+  background-color: #444444; /* Darker gray for the button */
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.login-button:hover {
+  background-color: #111111;
+}
+
+.register-button {
+  width: 100%;
+  padding: 10px 15px;
+  font-size: 16px;
+  color: #ffffff;
+  background-color: #444444; /* Darker gray for the button */
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.register-button:hover {
+  background-color: #111111;
+}
+
+/* Checkbox Group */
+.checkbox-group {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 10px; /* Adjust spacing */
+  margin-bottom: 15px;
+}
+
+.checkbox-input {
+  width: 16px;
+  height: 16px;
+  cursor: pointer;
+}
+
+.checkbox-label {
+  font-size: 14px;
+  color: #bbbbbb;
+  cursor: pointer;
+}
+
+/* Password popup feedback */
+.password-popup {
+  background-color: #444444; /* Match input box color */
+  border: 1px solid #666666; /* Subtle border */
+  padding: 10px;
+  margin-left: -235px;
+  margin-top: 80px;
+  border-radius: 5px;
+  font-size: 14px;
+  color: #f5f5f5; /* Light text */
+  position: absolute; /* Position relative to the input */
+  top: 0;
+  left: 90%;
+  width: 270px; /* Fixed width for consistent appearance */
+  z-index: 10;
+}
+
+.input-group {
+  position: relative; /* To position the popup relative to the input group */
+}
+
+.password-popup ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.password-popup li {
+  margin: 5px 0;
+}
+
+.password-popup li.valid {
+  color: green;
+}
+
+.password-popup li.invalid {
+  color: red;
+}
+
+/* Disable register button if password criteria are not met */
+.register-button:disabled {
+  background-color: #666666; /* Disabled button matches the dark theme */
+  cursor: not-allowed;
+}
+
+.return-button {
+  position: absolute;
+  top: 10%; /* Aligns to the top of the container */
+  left: 0; /* Aligns to the left of the container */
+  padding: 8px 12px; /* Add padding for a clickable area */
+  font-size: 20px; /* Make the arrow visually clear */
+  color: #ffffff;
+  background-color: transparent; /* No background for a minimalist look */
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: color 0.3s ease;
+  z-index: 100; /* Ensure it's above other elements */
+}
+
+.return-button:hover {
+  color: #aaaaaa; /* Slight color change on hover */
+}
+
+.captcha-container {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.captcha-question {
+  font-size: 18px;
+  margin: 10px 0;
+}
+
+.captcha-input {
+  padding: 10px;
+  font-size: 16px;
+  width: 100px;
+  margin-right: 10px;
+}
+
+.captcha-verify-button {
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+.captcha-verify-button:hover {
+  background-color: #45a049;
+}
+
+.captcha-error {
+  color: red;
+  margin-top: 10px;
+}
+
+button:disabled {
+  cursor: not-allowed;
+}
+
+.captcha-button.verified {
+  background-color: #4caf50; /* Green */
+  color: white;
+  cursor: not-allowed;
+}
+
+/* Homepage Styles - Scoped under .homepage */
+
+.homepage {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  width: 400px;
+  font-family: Arial, sans-serif;
+  background-color: #1c2741;
+  color: #333;
+}
+
+.homepage__top-section {
+  background-color: #1c2741;
+  padding: 30px 20px;
+  border-bottom-left-radius: 50px;
+  border-bottom-right-radius: 50px;
+  color: white;
+  position: relative;
+}
+
+.homepage__search-icon-container {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+}
+
+.homepage__search-icon {
+  font-size: 36px;
+  color: white;
+  cursor: pointer;
+}
+
+.homepage__welcome-user {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  font-size: 16px;
+}
+
+.homepage__balance-card-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 40px;
+}
+
+.homepage__balance-card {
+  background-color: #654ea3;
+  color: white;
+  padding: 20px;
+  border-radius: 15px;
+  text-align: center;
+  width: 80%;
+}
+
+.homepage__lower-section {
+  background-color: white;
+  border-top-left-radius: 50px;
+  border-top-right-radius: 50px;
+  padding: 40px 20px;
+  flex: 1;
+  overflow-y: auto;
+}
+
+h2 {
+  font-size: 26px;
+  font-weight: 900;
+  margin-top: 20px;
+}
+
+.homepage__recommendations {
+  font-size: 18px;
+  color: #888;
+  margin: 10px 0;
+}
+
+.homepage__parking-grid {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  margin: 20px 0;
+}
+
+.homepage__parking-card {
+  flex: 1;
+  color: white;
+  padding: 20px;
+  text-align: center;
+  border-radius: 15px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.homepage__reservation-card {
+  background-color: #88d498;
+  padding: 20px;
+  border-radius: 15px;
+  text-align: center;
+  margin-top: 20px;
+  color: white;
+}
+
+.homepage__bottom-nav {
+  background-color: #f4f4f4;
+  display: flex;
+  justify-content: space-around;
+  padding: 10px 0;
+  position: fixed;
+  bottom: 0;
+  width: inherit; /* Inherits the width of its container */
+  border-top: 1px solid #ccc;
+  z-index: 1000;
+}
+
+.homepage__nav-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 14px;
+  color: #333;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.homepage__nav-item i {
+  font-size: 20px;
+  margin-bottom: 5px;
+  color: #1c2741;
+  transition: color 0.3s ease;
+}
+
+.homepage__nav-item p {
+  margin: 0;
+  color: #666;
+}
+
+.homepage__nav-item.active i,
+.homepage__nav-item.active p {
+  color: #e76f51; /* Highlight color for active tab */
+}
+
+.homepage__nav-item:hover i,
+.homepage__nav-item:hover p {
+  color: #f4a261;
+}
+
+/* Notification Screen Specific Styles */
+
+/* Container for the entire notification screen */
+.notification-container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  width: 400px;
+  font-family: Arial, sans-serif;
+  background-color: #F9FAFB;
+}
+
+/* Header */
+.notification-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  padding: 20px;
+  background-color: #FFFFFF;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Adds light shadow for header */
+}
+
+.notification-back-button {
+  position: absolute;
+  left: 20px;
+  top: 20px;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.notification-title {
+  font-size: 30px;
+  font-weight: bold;
+  color: #000;
+  text-align: center;
+  margin-top: 10px;
+}
+
+/* Scrollable content area */
+.notification-scroll-content {
+  margin-top: 20px;
+  padding-bottom: 20px;
+}
+
+/* Section Titles (Today, Yesterday, etc.) */
+.notification-section {
+  margin-bottom: 20px;
+}
+
+.notification-section-title {
+  font-size: 22px;
+  font-weight: bold;
+  color: #000;
+  margin-bottom: 10px;
+}
+
+/* List Content */
+.notification-list-content {
+  padding-bottom: 10px;
+}
+
+/* Individual notification cards */
+.notification-card {
+  background-color: #FFFFFF;
+  border-radius: 15px;
+  padding: 20px;
+  margin-bottom: 10px;
+  box-shadow: 0 2px 3px rgba(0, 0, 0, 0.1);
+}
+
+.notification-card-content {
+  display: flex;
+  align-items: center;
+}
+
+.notification-indicator {
+  width: 5px;
+  height: 100%;
+  background-color: #FF0000;
+  border-radius: 5px;
+  margin-right: 10px;
+}
+
+.notification-text-container {
+  flex: 1;
+}
+
+.notification-card-title {
+  font-size: 20px;
+  font-weight: bold;
+  color: #000;
+  margin-bottom: 5px;
+}
+
+.notification-card-message {
+  font-size: 16px;
+  color: #555;
+}
+
+.notification-card-time {
+  font-size: 16px;
+  color: #555;
+}
+
+/* Profile Section Styles */
+.profile-container {
+  background-color: #1c2741; /* Dark blue background */
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  height: 100vh;
+  width: 400px;
+}
+
+.profile-back-button{
+  position: absolute;
+  left: 20px;
+  top: 20px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: white;
+}
+
+.profile-header {
+  background-color: #1c2741;
+  padding: 20px;
+  padding-top: 60px; /* Adjust padding to lower the profile header */
+  height: 220px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.profile-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.profile-info {
+  display: flex;
+  align-items: center;
+}
+
+.profile-picture {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  margin-right: 30px;
+}
+
+.welcome-text {
+  color: #a6a6a6;
+  font-size: 18px;
+  font-family: Arial, sans-serif;
+}
+
+.name-text {
+  color: #ffffff;
+  font-size: 32px;
+  font-family: Arial, sans-serif;
+  font-weight: bold;
+}
+
+.logout-button {
+  background-color: #394867;
+  padding: 12px;
+  border-radius: 15px;
+  border: none;
+  cursor: pointer;
+}
+
+.logout-button i {
+  font-size: 30px;
+  color: #a6a6a6;
+}
+
+.white-section {
+  background-color: #ffffff;
+  border-radius: 50px 50px 0 0;
+  padding: 40px 20px;
+  margin-top: -20px;
+}
+
+.nav-item {
+  display: flex;
+  align-items: center;
+  padding: 15px;
+  background-color: transparent;
+  border-radius: 10px;
+  border-bottom: 1px solid #e8e8e8;
+  cursor: pointer;
+}
+
+.nav-item i {
+  font-size: 20px;
+  color: #1c1f2e;
+}
+
+.nav-text {
+  margin-left: 10px;
+  font-size: 18px;
+  color: #1c1f2e;
+  font-family: Arial, sans-serif;
+  flex: 1;
+}
+
+.help-button {
+  background-color: #2b3050;
+  padding: 15px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 40px;
+  cursor: pointer;
+}
+
+.help-button i {
+  font-size: 30px;
+  color: white;
+}
+
+.help-text {
+  color: white;
+  font-size: 16px;
+  margin-left: 10px;
+}
+
+/* Overall container styling for Booking component */
+.booking-container {
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  height: 100vh;
+  width: 400px;
+  font-family: Arial, sans-serif;
+  background-color: #fff;
+  color: #333;
+}
+
+.booking-back-button {
+  position: absolute;
+  left: 20px;
+  top: 5px;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.booking-title {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  text-align: center;
+  color: #000;
+}
+
+/* Tab navigation styling */
+.booking-tab-container {
+  display: flex;
+  justify-content: space-around;
+  border-bottom: 1px solid #ccc;
+  margin-bottom: 20px;
+}
+
+.booking-tab {
+  padding: 10px 20px;
+  font-size: 16px;
+  color: #888;
+  cursor: pointer;
+  background: none;
+  border: none;
+  outline: none;
+}
+
+.booking-tab.booking-active-tab {
+  border-bottom: 2px solid #6A0DAD;
+  color: #6A0DAD;
+  font-weight: bold;
+}
+
+/* Content for tabs */
+.booking-tabs-content {
+  display: flex;
+  flex-direction: column;
+}
+
+.booking-content-list {
+  padding-bottom: 20px;
+}
+
+/* Booking card styling */
+.booking-card {
+  background-color: #f9fafb;
+  padding: 15px;
+  border-radius: 15px;
+  margin-bottom: 15px;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.booking-header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.booking-location-text {
+  font-size: 18px;
+  font-weight: bold;
+  color: #000;
+}
+
+.booking-favorite-button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #888;
+}
+
+.booking-favorite-button .heart {
+  color: #6A0DAD;
+}
+
+.booking-details-text {
+  font-size: 14px;
+  color: #555;
+  margin-bottom: 5px;
+}
+
+/* Actions buttons */
+.booking-actions {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+}
+
+.booking-cancel-text {
+  color: #ff0000;
+  font-size: 14px;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.booking-reschedule-button {
+  border: 1px solid #6A0DAD;
+  padding: 5px 10px;
+  border-radius: 5px;
+  background-color: white;
+  color: #6A0DAD;
+  font-weight: bold;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+/* ParkingPage.css */
+.parking-container {
+  margin: 50px auto;
+  position: relative;
+  text-align: center;
+  font-family: Arial, sans-serif;
+  padding-top: 200px;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  width: 400px;
+  font-family: Arial, sans-serif;
+  background-color: #1c2741;
+  color: #fff;
+}
+
+.parking-form label {
+  display: block;
+  margin: 10px 0;
+  font-weight: bold;
+}
+
+input[type="date"],
+input[type="time"],
+button {
+  padding: 10px;
+  margin: 5px 0;
+  font-size: 1em;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+.parking-slots {
+  margin: 20px 0;
+}
+
+.slot-button {
+  padding: 10px 20px;
+  margin: 5px;
+  border: none;
+  border-radius: 5px;
+  background-color: #4caf50;
+  color: white;
+  cursor: pointer;
+}
+.check-availability-button{
+  background-color: #2196f3;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.slot-button {
+  padding: 10px;
+  margin: 5px;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.slot-button.uninitialized {
+  background-color: gray;
+  color: white;
+}
+
+.slot-button.available {
+  background-color: green;
+  color: white;
+}
+
+.slot-button.unavailable {
+  background-color: red;
+  color: white;
+}
+
+.slot-button.selected {
+  border: 2px solid yellow;
+}
+
+.slot-button:disabled {
+  cursor: not-allowed;
+}
+
+
+.book-button {
+  background-color: #2196f3;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.book-button:hover {
+  background-color: #0b7dda;
+}
+
+/* Container */
+.confirmation-container {
+  padding: 20px;
+  font-family: Arial, sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 100vh;
+  background: linear-gradient(180deg, #f5f5f5, #e6e6ff);
+}
+
+/* Top Section */
+.confirmation-top-section {
+  text-align: center;
+  margin-bottom: 20px;
+  position: relative;
+}
+
+.back-button {
+  position: absolute;
+  left: -20px;
+  top: 5px;
+  background: none;
+  border: none;
+  font-size: 20px;
+  color: #000;
+  cursor: pointer;
+}
+
+.progress-bar-container {
+  height: 5px;
+  background-color: #ddd;
+  border-radius: 5px;
+  width: 100%;
+  margin-bottom: 10px;
+  overflow: hidden;
+}
+
+.progress-bar {
+  height: 100%;
+  width: 66%; /* 66% indicates Step 2 of 3 */
+  background-color: #6a0dad;
+}
+
+.step-text {
+  font-size: 18px;
+  color: #6a0dad;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.description {
+  font-size: 14px;
+  color: #555;
+  text-align: center;
+}
+
+
+/* Reservation Summary */
+.summary-card {
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  width: 90%;
+  max-width: 400px;
+  margin-bottom: 20px;
+  color: #000;
+}
+
+.summary-title {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  text-align: center;
+  color: #000;
+}
+
+.summary-row {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.label {
+  font-size: 16px;
+  color: #666;
+}
+
+.value {
+  font-size: 16px;
+  font-weight: bold;
+  color: #000;
+}
+
+/* Pay Button */
+.pay-button {
+  background-color: #6a0dad;
+  color: #fff;
+  padding: 15px 20px;
+  border-radius: 10px;
+  border: none;
+  font-size: 18px;
+  font-weight: bold;
+  cursor: pointer;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Container */
+.payment-container {
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  padding: 20px;
+  justify-content: space-between;
+  min-height: 100vh;
+  width: 400px;
+  background: linear-gradient(180deg, #f5f5f5, #e6e6ff);
+}
+
+/* Top Section */
+.top-section {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.progress-bar-container {
+  height: 5px;
+  background-color: #ddd;
+  border-radius: 5px;
+  width: 100%;
+  margin-bottom: 10px;
+  overflow: hidden;
+}
+
+.progress-bar {
+  height: 100%;
+  width: 100%; /* 100% indicates Step 3 of 3 */
+  background-color: #6a0dad;
+}
+
+.step-text {
+  font-size: 18px;
+  color: #6a0dad;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.description {
+  font-size: 14px;
+  color: #555;
+  text-align: center;
+}
+
+/* Total Cost Card */
+.card {
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 350px;
+  margin-bottom: 20px;
+}
+
+.card-title {
+  font-size: 16px;
+  color: #666;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.card-amount {
+  font-size: 24px;
+  color: #6a0dad;
+  font-weight: bold;
+  text-align: center;
+}
+
+/* Input Section */
+.input-section {
+  margin-bottom: 15px;
+  width: 380px;
+}
+
+.label {
+  font-size: 16px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: #555;
+  text-align: center;
+}
+
+.input {
+  width: 100%;
+  height: 40px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 10px;
+  margin-bottom: 15px;
+  background-color: #fff;
+  font-size: 16px;
+}
+
+/* Pay Button */
+.pay-button {
+  background-color: #6a0dad;
+  color: #fff;
+  padding: 15px 20px;
+  border-radius: 8px;
+  font-size: 18px;
+  font-weight: bold;
+  cursor: pointer;
+  border: none;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  margin-bottom: 10px;
+}
+
+.pay-button:hover {
+  background-color: #580a8a;
+}
+
+.back-button-payment {
+  font-size: 30px;
+  color: #000;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  margin-bottom: 20px;
+  padding: 10px;
+  display: inline-flex;
+  align-items: center;
+  position: absolute;
+  left: 5%;
+}
+
+.back-button-payment:hover {
+  color: #580a8a;
+}
+
+.back-button-payment:focus {
+  outline: none;
+}
