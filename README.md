@@ -73,7 +73,7 @@ brownie run scripts/deploy.py --network ganache-local
 ### Step 3: setting up backend server:
 1. Install and set up XAMPP:
 Download and install XAMPP from [here](https://www.apachefriends.org/).
-Edit httpd.conf:
+2. Edit httpd.conf:
 Navigate to \xampp\apache\conf and open httpd.conf.
 Update the following lines:
 ```apache
